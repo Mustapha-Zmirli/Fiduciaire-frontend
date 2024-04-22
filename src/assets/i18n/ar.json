@@ -1,0 +1,315 @@
+{
+    "from-to": "العناصر من {first} إلى {last} (الإجمالي {totalRecords})",
+    "new": "جديد",
+    "search": "بحث",
+    "export": "تصدير",
+    "validate": "التحقق",
+    "search": "البحث...",
+    "delete": "حذف",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "next": "التالي",
+    "yes": "نعم",
+    "no": "لا",
+    "actions": "الإجراءات",
+    "confirm": "تأكيد",
+    "creation": "إنشاء",
+    "list": "قائمة",
+
+    "actionPermission": {
+        "reference": "المرجع",
+        "libelle": "التسمية",
+        "actionPermission": "إذن الإجراء",
+        "tabPan": "إذن الإجراء",
+        "header": "قائمة أذونات الإجراءات",
+        "deleteActionPermissionConfirmationMessage": "هل أنت متأكد أنك تريد حذف إذن الإجراء؟",
+        "deleteActionPermissionsConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "modelPermissionUser": {
+        "actionPermission": "إذن الإجراء",
+        "actionPermissionPlaceHolder": "اختر إذن الإجراء",
+        "actionPermissionPlaceHolderFilter": "البحث حسب إذن الإجراء",
+        "modelPermission": "إذن النموذج",
+        "modelPermissionPlaceHolder": "اختر إذن النموذج",
+        "modelPermissionPlaceHolderFilter": "البحث حسب إذن النموذج",
+        "value": "القيمة",
+        "user": "المستخدم",
+        "userPlaceHolder": "اختر مستخدمًا",
+        "userPlaceHolderFilter": "البحث حسب المستخدم",
+        "subAttribute": "السمة الفرعية",
+        "modelPermissionUser": "إذن مستخدم النموذج",
+        "tabPan": "إذن مستخدم النموذج",
+        "header": "قائمة مستخدمي إذن النموذج",
+        "deleteModelPermissionUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف مستخدم إذن النموذج؟",
+        "deleteModelPermissionUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "role": {
+        "authority": "السلطة",
+        "role": "الدور",
+        "tabPan": "الدور",
+        "header": "قائمة الأدوار",
+        "deleteRoleConfirmationMessage": "هل أنت متأكد أنك تريد حذف الدور؟",
+        "deleteRolesConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "roleUser": {
+        "role": "الدور",
+        "rolePlaceHolder": "اختر دورًا",
+        "rolePlaceHolderFilter": "البحث حسب الدور",
+        "user": "المستخدم",
+        "userPlaceHolder": "اختر مستخدمًا",
+        "userPlaceHolderFilter": "البحث حسب المستخدم",
+        "roleUser": "دور المستخدم",
+        "tabPan": "دور المستخدم",
+        "header": "قائمة مستخدمي الدور",
+        "deleteRoleUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف مستخدم الدور؟",
+        "deleteRoleUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+    "user": {
+        "credentialsNonExpired": "صلاحية الاعتماد غير منتهية",
+        "enabled": "مفعل",
+        "email": "البريد الإلكتروني",
+        "accountNonExpired": "الحساب غير منتهي",
+        "accountNonLocked": "الحساب غير مقفل",
+        "username": "اسم المستخدم",
+        "password": "كلمة المرور",
+        "passwordChanged": "تم تغيير كلمة المرور",
+        "modelPermissionUsers": "مستخدمو إذن النموذج",
+        "roleUsers": "مستخدمو الدور",
+        "RoleUsersPlaceHolder": "حدد عدة أدوار",
+        "user": "المستخدم",
+        "tabPan": "المستخدم",
+        "header": "قائمة المستخدمين",
+        "deleteUserConfirmationMessage": "هل أنت متأكد أنك تريد حذف المستخدم؟",
+        "deleteUsersConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+    },
+
+	"modelPermission": {
+		"reference": "المرجع",
+		"libelle": "التسمية",
+		"modelPermission": "إذن النموذج",
+		"tabPan": "إذن النموذج",
+		"header": "قائمة أذونات النماذج",
+		"deleteModelPermissionConfirmationMessage": "هل أنت متأكد أنك تريد حذف إذن النموذج؟",
+		"deleteModelPermissionsConfirmationMessage": "هل أنت متأكد أنك تريد حذف العناصر المحددة؟"
+	}
+
+
+
+    "typeDemande":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "honnoraireComptableTraitant": "Honnoraire comptable traitant",
+        "honnoraireComptableTraitantMin": "Honnoraire comptable traitant Min",
+        "honnoraireComptableTraitantMax": "Honnoraire comptable traitant Max",
+        "honnoraireComptableValidateur": "Honnoraire comptable validateur",
+        "honnoraireComptableValidateurMin": "Honnoraire comptable validateur Min",
+        "honnoraireComptableValidateurMax": "Honnoraire comptable validateur Max",
+        "typeDemande": "Type demande",
+        "tabPan": "Type demande",
+        "header": "Liste des type demandes",
+        "deleteTypeDemandeConfirmationMessage": "Are you sure you want to delete type demande",
+        "deleteTypeDemandesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "typePaiement":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "typePaiement": "Type paiement",
+        "tabPan": "Type paiement",
+        "header": "Liste des type paiements",
+        "deleteTypePaiementConfirmationMessage": "Are you sure you want to delete type paiement",
+        "deleteTypePaiementsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "comptable":{
+        "cin": "Cin",
+        "prenom": "Prenom",
+        "nom": "Nom",
+        "email": "Email",
+        "categorieComptable": "Categorie comptable",
+        "comptable": "Comptable",
+        "tabPan": "Comptable",
+        "header": "Liste des comptables",
+        "deleteComptableConfirmationMessage": "Are you sure you want to delete comptable",
+        "deleteComptablesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "paiementComptableValidateur":{
+        "code": "Code",
+        "demande": "Demande",
+        "demandePlaceHolder": "Select a Demande",
+        "demandePlaceHolderFilter": "Search by Demande",
+        "montant": "Montant",
+        "montantMin": "Montant Min",
+        "montantMax": "Montant Max",
+        "comptableValidateur": "Comptable validateur",
+        "comptableValidateurPlaceHolder": "Select a Comptable validateur",
+        "comptableValidateurPlaceHolderFilter": "Search by Comptable validateur",
+        "typePaiement": "Type paiement",
+        "typePaiementPlaceHolder": "Select a Type paiement",
+        "typePaiementPlaceHolderFilter": "Search by Type paiement",
+        "datePaiement": "Date paiement",
+        "datePaiementMin": "Date paiement Min",
+        "datePaiementMax": "Date paiement Max",
+        "paiementComptableValidateur": "Paiement comptable validateur",
+        "tabPan": "Paiement comptable validateur",
+        "header": "Liste des paiement comptable validateurs",
+        "deletePaiementComptableValidateurConfirmationMessage": "Are you sure you want to delete paiement comptable validateur",
+        "deletePaiementComptableValidateursConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "categoriePieceJoint":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "categoriePieceJoint": "Categorie piece joint",
+        "tabPan": "Categorie piece joint",
+        "header": "Liste des categorie piece joints",
+        "deleteCategoriePieceJointConfirmationMessage": "Are you sure you want to delete categorie piece joint",
+        "deleteCategoriePieceJointsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "paiementComptableTraitant":{
+        "code": "Code",
+        "demande": "Demande",
+        "demandePlaceHolder": "Select a Demande",
+        "demandePlaceHolderFilter": "Search by Demande",
+        "montant": "Montant",
+        "montantMin": "Montant Min",
+        "montantMax": "Montant Max",
+        "comptableTraitant": "Comptable traitant",
+        "comptableTraitantPlaceHolder": "Select a Comptable traitant",
+        "comptableTraitantPlaceHolderFilter": "Search by Comptable traitant",
+        "typePaiement": "Type paiement",
+        "typePaiementPlaceHolder": "Select a Type paiement",
+        "typePaiementPlaceHolderFilter": "Search by Type paiement",
+        "datePaiement": "Date paiement",
+        "datePaiementMin": "Date paiement Min",
+        "datePaiementMax": "Date paiement Max",
+        "paiementComptableTraitant": "Paiement comptable traitant",
+        "tabPan": "Paiement comptable traitant",
+        "header": "Liste des paiement comptable traitants",
+        "deletePaiementComptableTraitantConfirmationMessage": "Are you sure you want to delete paiement comptable traitant",
+        "deletePaiementComptableTraitantsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "societe":{
+        "ice": "Ice",
+        "rc": "Rc",
+        "societe": "Societe",
+        "tabPan": "Societe",
+        "header": "Liste des societes",
+        "deleteSocieteConfirmationMessage": "Are you sure you want to delete societe",
+        "deleteSocietesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "paiementDemande":{
+        "code": "Code",
+        "montant": "Montant",
+        "montantMin": "Montant Min",
+        "montantMax": "Montant Max",
+        "datePaiement": "Date paiement",
+        "datePaiementMin": "Date paiement Min",
+        "datePaiementMax": "Date paiement Max",
+        "demande": "Demande",
+        "demandePlaceHolder": "Select a Demande",
+        "demandePlaceHolderFilter": "Search by Demande",
+        "typePaiement": "Type paiement",
+        "typePaiementPlaceHolder": "Select a Type paiement",
+        "typePaiementPlaceHolderFilter": "Search by Type paiement",
+        "paiementDemande": "Paiement demande",
+        "tabPan": "Paiement demande",
+        "header": "Liste des paiement demandes",
+        "deletePaiementDemandeConfirmationMessage": "Are you sure you want to delete paiement demande",
+        "deletePaiementDemandesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "demandePieceJoint":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "demande": "Demande",
+        "demandePlaceHolder": "Select a Demande",
+        "demandePlaceHolderFilter": "Search by Demande",
+        "path": "Path",
+        "demandePieceJoint": "Demande piece joint",
+        "tabPan": "Demande piece joint",
+        "header": "Liste des demande piece joints",
+        "deleteDemandePieceJointConfirmationMessage": "Are you sure you want to delete demande piece joint",
+        "deleteDemandePieceJointsConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "etatDemande":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "etatDemande": "Etat demande",
+        "tabPan": "Etat demande",
+        "header": "Liste des etat demandes",
+        "deleteEtatDemandeConfirmationMessage": "Are you sure you want to delete etat demande",
+        "deleteEtatDemandesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "categorieComptable":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "categorieComptable": "Categorie comptable",
+        "tabPan": "Categorie comptable",
+        "header": "Liste des categorie comptables",
+        "deleteCategorieComptableConfirmationMessage": "Are you sure you want to delete categorie comptable",
+        "deleteCategorieComptablesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+
+    "demande":{
+        "code": "Code",
+        "libelle": "Libelle",
+        "dateDemande": "Date demande",
+        "dateDemandeMin": "Date demande Min",
+        "dateDemandeMax": "Date demande Max",
+        "dateExigibilite": "Date exigibilite",
+        "dateExigibiliteMin": "Date exigibilite Min",
+        "dateExigibiliteMax": "Date exigibilite Max",
+        "societe": "Societe",
+        "societePlaceHolder": "Select a Societe",
+        "societePlaceHolderFilter": "Search by Societe",
+        "typeDemande": "Type demande",
+        "typeDemandePlaceHolder": "Select a Type demande",
+        "typeDemandePlaceHolderFilter": "Search by Type demande",
+        "etatDemande": "Etat demande",
+        "etatDemandePlaceHolder": "Select a Etat demande",
+        "etatDemandePlaceHolderFilter": "Search by Etat demande",
+        "comptableValidateur": "Comptable validateur",
+        "comptableValidateurPlaceHolder": "Select a Comptable validateur",
+        "comptableValidateurPlaceHolderFilter": "Search by Comptable validateur",
+        "comptableTraitant": "Comptable traitant",
+        "comptableTraitantPlaceHolder": "Select a Comptable traitant",
+        "comptableTraitantPlaceHolderFilter": "Search by Comptable traitant",
+        "dateValidation": "Date validation",
+        "dateValidationMin": "Date validation Min",
+        "dateValidationMax": "Date validation Max",
+        "dateTraitement": "Date traitement",
+        "dateTraitementMin": "Date traitement Min",
+        "dateTraitementMax": "Date traitement Max",
+        "demande": "Demande",
+        "tabPan": "Demande",
+        "header": "Liste des demandes",
+        "deleteDemandeConfirmationMessage": "Are you sure you want to delete demande",
+        "deleteDemandesConfirmationMessage": "Are you sure you want to delete the selected elements"
+    },
+
+"appName": "GED"
+}
+
+
