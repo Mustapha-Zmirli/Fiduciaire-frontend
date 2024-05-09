@@ -1,0 +1,28 @@
+<div class="container-fluid">
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Societe</th>
+        <th>libelle</th>
+        <th>etat demande</th>
+        <th>Comptable traitant</th>
+        <th >Action</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr *ngFor="let d of demandes ;indes as i">
+        <td >{{d.societe.ice}}</td>
+        <td >{{d.libelle}}</td>
+        <td >{{d.etatDemande.libelle}}</td>
+        <td >{{d.comptableTraitant.cin}}</td>
+        <td>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button class="btn btn-primary" type="submit" id="valide"(click)="validerDemande(d)" >Affecter a un comptable validateur</button>
+
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</div>
