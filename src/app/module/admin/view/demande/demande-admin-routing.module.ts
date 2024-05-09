@@ -21,6 +21,7 @@ import { TypeDemandeListAdminComponent } from './type-demande/list/type-demande-
 import { DemandePieceJointListAdminComponent } from './demande-piece-joint/list/demande-piece-joint-list-admin.component';
 import { EtatDemandeListAdminComponent } from './etat-demande/list/etat-demande-list-admin.component';
 import { DemandeListAdminComponent } from './demande/list/demande-list-admin.component';
+import {DemandeTraiteComponent} from "./demande-traite/demande-traite.component";
 @NgModule({
     imports: [
         RouterModule.forChild(
@@ -133,6 +134,13 @@ import { DemandeListAdminComponent } from './demande/list/demande-list-admin.com
                                     canActivate: [AuthGuard]
                                 }
                             ]
+                        },
+                        {
+
+                            path: 'demande-traite',
+                                    component: DemandeTraiteComponent ,
+                                    canActivate: [AuthGuard]
+
                         },
 
                     ]

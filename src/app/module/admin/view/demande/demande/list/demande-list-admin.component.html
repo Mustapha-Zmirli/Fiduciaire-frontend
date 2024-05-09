@@ -55,30 +55,30 @@
 
                         <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
                             <label  class="font-bold block mb-2" for="5-2">{{'demande.societe' | translate}}</label>
-                            <p-dropdown [options]="societes" [(ngModel)]="criteria.societe" id="5" [filter]="true" class="p-fluid"
+                            <p-dropdown [options]="societes" [(ngModel)]="criteria.societe" id="5-2" [filter]="true" class="p-fluid"
                                         [showClear]="true"  placeholder="{{'demande.societe' | translate}}" optionLabel="ice">
                             </p-dropdown>
                         </div>
                         <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
                             <label  class="font-bold block mb-2" for="6-2">{{'demande.typeDemande' | translate}}</label>
-                            <p-dropdown [options]="typeDemandes" [(ngModel)]="criteria.typeDemande" id="6" [filter]="true" class="p-fluid"
+                            <p-dropdown [options]="typeDemandes" [(ngModel)]="criteria.typeDemande" id="6-2" [filter]="true" class="p-fluid"
                                         [showClear]="true"  placeholder="{{'demande.typeDemande' | translate}}" optionLabel="libelle">
                             </p-dropdown>
                         </div>
                         <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
-                            <label  class="font-bold block mb-2" for="7-2">{{'demande.etatDemande' | translate}}</label>
+                            <label  class="font-bold block mb-2" for="7">{{'demande.etatDemande' | translate}}</label>
                             <p-dropdown [options]="etatDemandes" [(ngModel)]="criteria.etatDemande" id="7" [filter]="true" class="p-fluid"
                                         [showClear]="true"  placeholder="{{'demande.etatDemande' | translate}}" optionLabel="libelle">
                             </p-dropdown>
                         </div>
                         <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
-                            <label  class="font-bold block mb-2" for="8-2">{{'demande.comptableValidateur' | translate}}</label>
+                            <label  class="font-bold block mb-2" for="8">{{'demande.comptableValidateur' | translate}}</label>
                             <p-dropdown [options]="comptableValidateurs" [(ngModel)]="criteria.comptableValidateur" id="8" [filter]="true" class="p-fluid"
                                         [showClear]="true"  placeholder="{{'demande.comptableValidateur' | translate}}" optionLabel="cin">
                             </p-dropdown>
                         </div>
                         <div class="lg:col-3 md:col-6 sm:col-12 mb-4">
-                            <label  class="font-bold block mb-2" for="9-2">{{'demande.comptableTraitant' | translate}}</label>
+                            <label  class="font-bold block mb-2" for="9">{{'demande.comptableTraitant' | translate}}</label>
                             <p-dropdown [options]="comptableTraitants" [(ngModel)]="criteria.comptableTraitant" id="9" [filter]="true" class="p-fluid"
                                         [showClear]="true"  placeholder="{{'demande.comptableTraitant' | translate}}" optionLabel="cin">
                             </p-dropdown>
@@ -138,7 +138,7 @@
                         <th style="width: 3rem">
                             <p-tableHeaderCheckbox></p-tableHeaderCheckbox>
                         </th>
-                                
+
                         <th pSortableColumn="code">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.code' | translate}}</span>
@@ -146,8 +146,8 @@
                                 <p-columnFilter type="text" field="element.code" display="menu" class="ml-auto"></p-columnFilter>
                             </div>
                         </th>
-                                
-                                
+
+
                         <th pSortableColumn="libelle">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.libelle' | translate}}</span>
@@ -155,79 +155,79 @@
                                 <p-columnFilter type="text" field="element.libelle" display="menu" class="ml-auto"></p-columnFilter>
                             </div>
                         </th>
-                                
-                                
+
+
                         <th pSortableColumn="dateDemande">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.dateDemande' | translate}}</span>
                                 <p-sortIcon field="dateDemande"></p-sortIcon>
                             </div>
                         </th>
-                                
-                                
+
+
                         <th pSortableColumn="dateExigibilite">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.dateExigibilite' | translate}}</span>
                                 <p-sortIcon field="dateExigibilite"></p-sortIcon>
                             </div>
                         </th>
-                                
-                                
+
+
                         <th pSortableColumn="societe">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.societe' | translate}}</span>
                                 <p-sortIcon field="societe"></p-sortIcon>
                             </div>
                         </th>
-                                
-                                
+
+
                         <th pSortableColumn="typeDemande">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.typeDemande' | translate}}</span>
                                 <p-sortIcon field="typeDemande"></p-sortIcon>
                             </div>
                         </th>
-                                
-                                
+
+
                         <th pSortableColumn="etatDemande">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.etatDemande' | translate}}</span>
                                 <p-sortIcon field="etatDemande"></p-sortIcon>
                             </div>
                         </th>
-                                
-                                
+
+
                         <th pSortableColumn="comptableValidateur">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.comptableValidateur' | translate}}</span>
                                 <p-sortIcon field="comptableValidateur"></p-sortIcon>
                             </div>
                         </th>
-                                
-                                
+
+
                         <th pSortableColumn="comptableTraitant">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.comptableTraitant' | translate}}</span>
                                 <p-sortIcon field="comptableTraitant"></p-sortIcon>
                             </div>
                         </th>
-                                
-                                <!-- 
+
+                                <!--
                         <th pSortableColumn="dateValidation">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.dateValidation' | translate}}</span>
                                 <p-sortIcon field="dateValidation"></p-sortIcon>
                             </div>
                         </th>
-                                --> 
-                                <!-- 
+                                -->
+                                <!--
                         <th pSortableColumn="dateTraitement">
                             <div class="p-d-flex p-jc-between p-ai-center">
                                 <span>{{'demande.dateTraitement' | translate}}</span>
                                 <p-sortIcon field="dateTraitement"></p-sortIcon>
                             </div>
                         </th>
-                                --> 
+                                -->
                         <th>Actions</th>
                     </tr>
                 </ng-template>
@@ -236,39 +236,39 @@
                         <td>
                             <p-tableCheckbox [value]="element"></p-tableCheckbox>
                         </td>
-                            
+
                         <td>{{element.code}}</td>
-                            
-                            
+
+
                         <td>{{element.libelle}}</td>
-                            
-                            
+
+
                         <td>{{element.dateDemande | date :'dd/MM/yyyy HH:mm' }}</td>
-                            
-                            
+
+
                         <td>{{element.dateExigibilite | date :'dd/MM/yyyy HH:mm' }}</td>
-                            
-                            
+
+
                         <td>{{element.societe?.ice}}</td>
-                            
-                            
+
+
                         <td>{{element.typeDemande?.libelle}}</td>
-                            
-                            
+
+
                         <td>{{element.etatDemande?.libelle}}</td>
-                            
-                            
+
+
                         <td>{{element.comptableValidateur?.cin}}</td>
-                            
-                            
+
+
                         <td>{{element.comptableTraitant?.cin}}</td>
-                            
-                             <!-- 
+
+                             <!--
                         <td>{{element.dateValidation | date :'dd/MM/yyyy HH:mm' }}</td>
-                             --> 
-                             <!-- 
+                             -->
+                             <!--
                         <td>{{element.dateTraitement | date :'dd/MM/yyyy HH:mm' }}</td>
-                             --> 
+                             -->
                         <td>
                             <button pButton pRipple icon="pi pi-pencil"  class="p-button-rounded p-button-info mr-2" (click)="edit(element)"  *ngIf="editActionIsValid"></button>
                             <button pButton pRipple icon="pi pi-list" class="p-button-rounded p-button-secondary mr-2" (click)="view(element)"  *ngIf="viewActionIsValid"></button>
@@ -285,6 +285,7 @@
                     </div>
                 </ng-template>
             </p-table>
+
         </div>
 
         <app-demande-create-admin  *ngIf="createDialog  && createActionIsValid"></app-demande-create-admin>
@@ -299,3 +300,7 @@
         You don't have permission to access !
     </p>
 </p-card>
+
+
+
+
