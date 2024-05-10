@@ -40,55 +40,57 @@ import {SecurityModule} from 'src/app/module/security/security.module';
 import {SecurityRoutingModule} from 'src/app/module/security/security-routing.module';
 
 
-@NgModule({
-  declarations: [
-   LoginAdminComponent,
-   RegisterAdminComponent
-  ],
-  imports: [
-    CommonModule,
-    ToastModule,
-    ToolbarModule,
-    TableModule,
-    ConfirmDialogModule,
-    DialogModule,
-    PasswordModule,
-    InputTextModule,
-    ButtonModule,
-    FormsModule,
-    ReactiveFormsModule,
-    RouterModule,
-    SplitButtonModule,
-    BrowserAnimationsModule,
-    DropdownModule,
-    TabViewModule,
-    InputSwitchModule,
-    InputTextareaModule,
-    CalendarModule,
-    PanelModule,
-    MessageModule,
-    MessagesModule,
-    InputNumberModule,
-    BadgeModule,
-    MultiSelectModule,
-  PaiementAdminModule,
-  PaiementAdminRoutingModule,
-  CommunAdminModule,
-  CommunAdminRoutingModule,
-  DemandeAdminModule,
-  DemandeAdminRoutingModule,
-  SecurityModule,
-  SecurityRoutingModule
-  ],
-  exports: [
-  LoginAdminComponent,
-  RegisterAdminComponent,
+@NgModule
+(
+    {
+    declarations: [
+        LoginAdminComponent,
+        RegisterAdminComponent,
+    ],
+    exports: [
+        LoginAdminComponent,
+        RegisterAdminComponent,
 
-    PaiementAdminModule,
-    CommunAdminModule,
-    DemandeAdminModule,
-  SecurityModule
-  ],
+        PaiementAdminModule,
+        CommunAdminModule,
+        DemandeAdminModule,
+        SecurityModule
+    ],
+    imports: [
+        CommonModule,
+        ToastModule,
+        ToolbarModule,
+        TableModule,
+        ConfirmDialogModule,
+        DialogModule,
+        PasswordModule,
+        InputTextModule,
+        ButtonModule,
+        FormsModule,
+        ReactiveFormsModule,
+        RouterModule,
+        SplitButtonModule,
+        BrowserAnimationsModule,
+        DropdownModule,
+        TabViewModule,
+        InputSwitchModule,
+        InputTextareaModule,
+        CalendarModule,
+        PanelModule,
+        MessageModule,
+        MessagesModule,
+        InputNumberModule,
+        BadgeModule,
+        MultiSelectModule,
+        PaiementAdminModule,
+        PaiementAdminRoutingModule,
+        CommunAdminModule,
+        CommunAdminRoutingModule,
+        DemandeAdminModule,
+        DemandeAdminRoutingModule,
+        SecurityModule,
+        SecurityRoutingModule
+    ],
 
 })
 export class AdminModule { }
