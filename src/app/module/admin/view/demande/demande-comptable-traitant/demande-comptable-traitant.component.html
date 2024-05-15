@@ -5,20 +5,26 @@
                 <thead>
                 <tr>
                     <th>code</th>
-                    <th> cin du comptable traitant</th>
-                    <th>libelle</th>
+                    <th>Libelle</th>
+                    <th>Etat Demande</th>
+                    <th>Societe</th>
+                    <th>Comptable Traitant</th>
+                    <th>Comptable Validateur</th>
                     <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr *ngFor="let demande of demandesAssociees">
                     <td>{{ demande.code }}</td>
-                    <td>{{ demande.comptableTraitant ? demande.comptableTraitant.cin : '' }}</td>
                     <td>{{ demande.libelle }}</td>
+                    <td>{{ demande.etatDemande ? demande.etatDemande.libelle : '' }}</td>
+                    <td>{{ demande.societe ? demande.societe.ice : '' }}</td>
+                    <td>{{ demande.comptableTraitant ? demande.comptableTraitant.nom : '' }}</td>
+                    <td>{{ demande.comptableValidateur ? demande.comptableValidateur.nom : '' }}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button class="btn btn-primary"  (click)="getDemandesAcceptees(demande)">Accepter</button>
-                        <button class="btn btn-primary"  (click)="getDemandeRefuse(demande.code)">Refuser</button>
+                        <button class="btn btn-primary mr-2"  (click)="getDemandesAcceptees(demande.code)">Accepter</button>
+                        <button class="btn btn-primary mr-2"  (click)="getDemandeRefuse(demande.code)">Refuser</button>
                         </div>
                     </td>
                 </tr>
@@ -32,18 +38,24 @@
                 <thead>
                 <tr>
                     <th>code</th>
-                    <th> cin du comptable traitant</th>
-                    <th>libelle</th>
+                    <th>Libelle</th>
+                    <th>Etat Demande</th>
+                    <th>Societe</th>
+                    <th>Comptable Traitant</th>
+                    <th>Comptable Validateur</th>
                     <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr *ngFor="let demande of demandesAcceptees">
                     <td>{{ demande.code }}</td>
-                    <td>{{ demande.comptableTraitant ? demande.comptableTraitant.cin : '' }}</td>
                     <td>{{ demande.libelle }}</td>
+                    <td>{{ demande.etatDemande ? demande.etatDemande.libelle : '' }}</td>
+                    <td>{{ demande.societe ? demande.societe.ice : '' }}</td>
+                    <td>{{ demande.comptableTraitant ? demande.comptableTraitant.nom : '' }}</td>
+                    <td>{{ demande.comptableValidateur ? demande.comptableValidateur.nom : '' }}</td>
                     <td>
-                        <button class="btn btn-primary" (click)="finaliserDemande(demande.code)">Finaliser la demande</button>
+                        <button class="btn btn-primary mr-2" (click)="finaliserDemande(demande.code)">Finaliser la demande</button>
                     </td>
                 </tr>
                 </tbody>

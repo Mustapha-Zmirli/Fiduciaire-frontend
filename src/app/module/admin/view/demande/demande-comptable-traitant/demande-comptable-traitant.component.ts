@@ -30,13 +30,17 @@ export class DemandeComptableTraitantComponent implements OnInit{
         this.demandeComptableTraitantService.getListDemandesAcceptees().subscribe(data =>
             this.demandesAcceptees=data)
     }
-    public getDemandesAcceptees(demande: DemandeDto) {
-        this.demandeComptableTraitantService.getDemandesAcceptees(demande.code).subscribe(data => {
+    public getDemandesAcceptees(code: string) {
+        this.demandeComptableTraitantService.getDemandesAcceptees(code).subscribe(data => {
             if (data > 0) {
-                console.log("La demande a été traitée avec succès.");
+                console.log("La demande a été traitée avec succès avec le code ${code} :`, res");
                // this.demandesAcceptees = this.demandesAssociees.filter(d => d !== demande);
-                this.demandesAcceptees.push(demande);
-                this.demandesAssociees = this.demandesAssociees.filter(d => d !== demande);
+                //this.demandesAcceptees.push(demande);
+                //this.demandesAssociees = this.demandesAssociees.filter(d => d !== demande);
+                // Ajoutez la demande à la liste des demandes acceptées
+                //this.demandesAcceptees.push(this.demandesAssociees.find(d => d.code === code));
+                // Supprimez la demande de la liste des demandes associées
+                this.demandesAssociees = this.demandesAssociees.filter(d => d.code !== code);
             } else {
                 console.log("La demande n'a pas pu être traitée.");
             }
@@ -90,7 +94,8 @@ getDemandeRefuse(code: string ) {
     finaliserDemande(code: string) {
       this.demandeComptableTraitantService.getDemandesFinalisees(code).subscribe(res=>{
             console.log(res);
-            const demandeFinalisee = this.demandesAcceptees.find(demande => demande.code === code);
+          console.log(`Demande traitée avec le code ${code} :`, res);
+          const demandeFinalisee = this.demandesAcceptees.find(demande => demande.code === code);
             if (demandeFinalisee) {
                 //demandeFinalisee.etatDemande.libelle='traité';
                 this.demandesAcceptees = this.demandesAcceptees.filter(demande => demande.code !== code);
