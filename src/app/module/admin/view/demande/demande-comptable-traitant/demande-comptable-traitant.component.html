@@ -1,0 +1,58 @@
+<div class="container mt-3">
+    <div class="container-fluid" >
+        <div class="client-section">
+            <table class="table tableClient table-hover">
+                <thead>
+                <tr>
+                    <th>code</th>
+                    <th> cin du comptable traitant</th>
+                    <th>libelle</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let demande of demandesAssociees">
+                    <td>{{ demande.code }}</td>
+                    <td>{{ demande.comptableTraitant ? demande.comptableTraitant.cin : '' }}</td>
+                    <td>{{ demande.libelle }}</td>
+                    <td>
+                        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                        <button class="btn btn-primary"  (click)="getDemandesAcceptees(demande)">Accepter</button>
+                        <button class="btn btn-primary"  (click)="getDemandeRefuse(demande.code)">Refuser</button>
+                        </div>
+                    </td>
+                </tr>
+                </tbody>
+
+            </table>
+            <br>
+            <br>
+            <br>
+            <table class="table tableClient table-hover mt-3">
+                <thead>
+                <tr>
+                    <th>code</th>
+                    <th> cin du comptable traitant</th>
+                    <th>libelle</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let demande of demandesAcceptees">
+                    <td>{{ demande.code }}</td>
+                    <td>{{ demande.comptableTraitant ? demande.comptableTraitant.cin : '' }}</td>
+                    <td>{{ demande.libelle }}</td>
+                    <td>
+                        <button class="btn btn-primary" (click)="finaliserDemande(demande.code)">Finaliser la demande</button>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+
+
