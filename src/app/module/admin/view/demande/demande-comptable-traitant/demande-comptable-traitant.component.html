@@ -1,7 +1,8 @@
-<div class="container mt-3">
+<div class="container mt-5">
     <div class="container-fluid" >
-        <div class="client-section">
-            <table class="table tableClient table-hover">
+        <div class="demande-section">
+            <h2>Demandes Associées :</h2>
+            <table class="table tableDemande table-hover">
                 <thead>
                 <tr>
                     <th>code</th>
@@ -23,8 +24,8 @@
                     <td>{{ demande.comptableValidateur ? demande.comptableValidateur.nom : '' }}</td>
                     <td>
                         <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                        <button class="btn btn-primary mr-2"  (click)="getDemandesAcceptees(demande.code)">Accepter</button>
-                        <button class="btn btn-primary mr-2"  (click)="getDemandeRefuse(demande.code)">Refuser</button>
+                            <button class="btn btn-primary " id="accepter" (click)="getDemandesAcceptees(demande.code)">Accepter</button>
+                            <button class="btn btn-primary " id="refuser" (click)="getDemandeRefuse(demande.code)">Refuser</button>
                         </div>
                     </td>
                 </tr>
@@ -34,7 +35,8 @@
             <br>
             <br>
             <br>
-            <table class="table tableClient table-hover mt-3">
+            <h2>Demandes Acceptées :</h2>
+            <table class="table tableDemande table-hover mt-3">
                 <thead>
                 <tr>
                     <th>code</th>
@@ -55,7 +57,7 @@
                     <td>{{ demande.comptableTraitant ? demande.comptableTraitant.nom : '' }}</td>
                     <td>{{ demande.comptableValidateur ? demande.comptableValidateur.nom : '' }}</td>
                     <td>
-                        <button class="btn btn-primary mr-2" (click)="finaliserDemande(demande.code)">Finaliser la demande</button>
+                        <button class="btn btn-primary mr-2" id="finaliser" (click)="finaliserDemande(demande.code)">Finaliser</button>
                     </td>
                 </tr>
                 </tbody>

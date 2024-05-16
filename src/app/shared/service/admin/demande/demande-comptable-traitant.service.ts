@@ -17,13 +17,12 @@ export class DemandeComptableTraitantService {
     public getDemandeEnAttente():Observable<DemandeDto[]>{
         return  this.http.get<DemandeDto[]>(`${this.baseUrl}demandeEnAttente`);
     }
+    public getDemandeRefusee():Observable<DemandeDto[]>{
+        return  this.http.get<DemandeDto[]>(`${this.baseUrl}demandesRefusees`);
+    }
     public getListDemandesAcceptees():Observable<DemandeDto[]>{
         return  this.http.get<DemandeDto[]>(`${this.baseUrl}demandesAcceptees`);
     }
-   /* public getDemandeAccepte():Observable<DemandeDto[]>{
-        return  this.http.get<DemandeDto[]>(`${this.baseUrl}demandeAccepte`);
-    }*/
-
     public getDemandesAcceptees(code: string): Observable<number> {
         return this.http.put<number>(`${this.baseUrl}accepterDemande/code/${code}`, {});
     }

@@ -26,6 +26,10 @@ export class DemandeComptableTraitantComponent implements OnInit{
         this.demandeComptableTraitantService.getDemandeEnAttente().subscribe(data =>
             this.demandesAssociees=data)
     }
+    public getDemandeRefusee():void{
+        this.demandeComptableTraitantService.getDemandeRefusee().subscribe(data =>
+            this.demandesRefuser=data)
+    }
     public getListDemandesAcceptees():void{
         this.demandeComptableTraitantService.getListDemandesAcceptees().subscribe(data =>
             this.demandesAcceptees=data)
@@ -34,17 +38,24 @@ export class DemandeComptableTraitantComponent implements OnInit{
         this.demandeComptableTraitantService.getDemandesAcceptees(code).subscribe(data => {
             if (data > 0) {
                 console.log("La demande a été traitée avec succès avec le code ${code} :`, res");
-               // this.demandesAcceptees = this.demandesAssociees.filter(d => d !== demande);
-                //this.demandesAcceptees.push(demande);
-                //this.demandesAssociees = this.demandesAssociees.filter(d => d !== demande);
-                // Ajoutez la demande à la liste des demandes acceptées
-                //this.demandesAcceptees.push(this.demandesAssociees.find(d => d.code === code));
-                // Supprimez la demande de la liste des demandes associées
+                this.demandesAcceptees.push(this.demandesAssociees.find(d => d.code === code));
                 this.demandesAssociees = this.demandesAssociees.filter(d => d.code !== code);
             } else {
                 console.log("La demande n'a pas pu être traitée.");
             }
         });
+    }
+    getDemandeRefuse(code: string ) {
+        this.demandeComptableTraitantService.getDemandesRefuses(code).subscribe(data => {
+            if (data > 0) {
+                console.log("La demande a été refusée avec le code ${code} :`, data");
+                this.demandesRefuser.push(this.demandesAssociees.find(d => d.code === code));
+                this.demandesAssociees = this.demandesAssociees.filter(d => d.code !== code);
+            } else {
+                console.log("La demande n'a pas refusée.");
+            }
+        });
+
     }
 
    /* getDemandesAssociees() {
@@ -59,37 +70,9 @@ export class DemandeComptableTraitantComponent implements OnInit{
 
         this.getDemandeEnAttente();
         this.getListDemandesAcceptees();
+        this.getDemandeRefusee();
     }
-    /*getDemandeAcceptee(code: string) {
-         this.demandeComptableTraitantService.getDemandesAcceptees(code).subscribe(res=>{
-            console.log(res);
 
-
-         }
-            const demandeAcceptee = this.demandes.find(demande => demande.code === code);
-            if (demandeAcceptee) {
-                this.demandesAcceptees=res;
-                demandeAcceptee.etatDemande.libelle='comptable traitant accepté';
-                this.demandesAcceptees.push(demandeAcceptee);
-                this.demandesAssociees = this.demandesAssociees.filter(demande => demande.code !== code);//la demande acceptée est retirée de la liste demandes
-            }
-        },error => console.log(error)
-        )
-    }*/
-getDemandeRefuse(code: string ) {
-    this.demandeComptableTraitantService.getDemandesRefuses(code).subscribe(
-        res => {
-            console.log(`Demande refusée avec le code ${code} :`, res);
-            const demandeRefuse = this.demandes.find(demande => demande.code === code);
-            if (demandeRefuse) {
-                //demandeRefuse.etatDemande.libelle = 'RefuserParComptableTraitant';
-                this.demandesRefuser.push(demandeRefuse);
-                this.demandes = this.demandes.filter(demande => demande.code !== code);
-            }
-        },
-        error => console.log(`Erreur lors de la récupération de la demande refusée avec le code ${code} :`, error)
-);
-}
 
     finaliserDemande(code: string) {
       this.demandeComptableTraitantService.getDemandesFinalisees(code).subscribe(res=>{
@@ -97,7 +80,6 @@ getDemandeRefuse(code: string ) {
           console.log(`Demande traitée avec le code ${code} :`, res);
           const demandeFinalisee = this.demandesAcceptees.find(demande => demande.code === code);
             if (demandeFinalisee) {
-                //demandeFinalisee.etatDemande.libelle='traité';
                 this.demandesAcceptees = this.demandesAcceptees.filter(demande => demande.code !== code);
                 this.demandesValidateur.push(demandeFinalisee);
             }
