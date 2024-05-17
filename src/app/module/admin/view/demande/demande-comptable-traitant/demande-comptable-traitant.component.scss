@@ -1,0 +1,57 @@
+
+*{
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.container-fluid{
+    padding: 0;
+    width: 979px;
+    margin-top:80px;
+    h2{
+        color: #0F1E54;
+        font-size:24px
+    }
+
+}
+
+.tableDemande{
+    border-radius: 10px;
+    margin-left: 0;
+    margin-right: 0;
+    width: 850px;
+
+
+    th{
+        color: #0F1E54;
+        background-color: #C6D9EE;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: "poppins", sans-serif;
+    }
+    tr{
+        background-color: #fff !important;
+    }
+}
+#accepter{
+    color: #ffffff;
+    background-color: #0d800b;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+#refuser{
+    color: #ffffff;
+    background-color: #bf0606;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}
+#finaliser{
+    color: #ffffff;
+    background-color: #0b488c;
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+}

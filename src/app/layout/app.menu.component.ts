@@ -79,6 +79,11 @@ constructor(public layoutService: LayoutService, public app: AppComponent, publi
                                 icon: 'pi pi-fw pi-plus-circle',
                                 routerLink: ['/app/admin/demande/demande-traite']
                             },
+                            {
+                                label: 'Liste demande comptable traitant',
+                                icon: 'pi pi-fw pi-plus-circle',
+                                routerLink: ['/app/admin/demande/demande-comptable-traitant']
+                            },
 						]
 					  },
 					  {

@@ -51,6 +51,7 @@ export class DemandeListAdminComponent extends AbstractListController<DemandeDto
     }
 
 
+
     public override  initCol() {
         this.cols = [
             {field: 'code', header: 'Code'},
