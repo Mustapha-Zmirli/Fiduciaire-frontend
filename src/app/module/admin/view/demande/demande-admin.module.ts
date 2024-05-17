@@ -51,6 +51,7 @@ import {PaginatorModule} from 'primeng/paginator';
 import {RippleModule} from "primeng/ripple";
 import { DemandeTraiteComponent } from './demande-traite/demande-traite.component';
 import { DemandeComptableTraitantComponent } from './demande-comptable-traitant/demande-comptable-traitant.component';
+import {DemandeValideComponent} from "./demande-valide/demande-valide.component";
 
 
 
@@ -74,7 +75,9 @@ import { DemandeComptableTraitantComponent } from './demande-comptable-traitant/
     DemandeViewAdminComponent,
     DemandeEditAdminComponent,
     DemandeTraiteComponent,
+    DemandeValideComponent,
     DemandeComptableTraitantComponent,
+
   ],
     imports: [
         CommonModule,
