@@ -23,6 +23,7 @@ import { EtatDemandeListAdminComponent } from './etat-demande/list/etat-demande-
 import { DemandeListAdminComponent } from './demande/list/demande-list-admin.component';
 import {DemandeTraiteComponent} from "./demande-traite/demande-traite.component";
 import {DemandeComptableTraitantComponent} from "./demande-comptable-traitant/demande-comptable-traitant.component";
+import {DemandeValideComponent} from "./demande-valide/demande-valide.component";
 @NgModule({
     imports: [
         RouterModule.forChild(
@@ -140,6 +141,13 @@ import {DemandeComptableTraitantComponent} from "./demande-comptable-traitant/de
 
                             path: 'demande-traite',
                                     component: DemandeTraiteComponent ,
+                                    canActivate: [AuthGuard]
+
+                        },
+                        {
+
+                            path: 'demande-valide',
+                                    component: DemandeValideComponent ,
                                     canActivate: [AuthGuard]
 
                         },
