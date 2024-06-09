@@ -9,3 +9,75 @@
     border-radius: 10px;
     margin: 6px;
 }
+
+.green-snackbar {
+    background-color: #4caf50 !important; /* Green color */
+    color: white !important; /* White text color */
+}
+
+.red-snackbar {
+    background-color: #f44336 !important; /* Red color */
+    color: white !important; /* White text color */
+}
+
+
+
+
+.container-fluid {
+    padding: 20px;
+}
+
+.table {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.thead-dark th {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.btn-group {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-action {
+    margin: 0 5px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-action:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .table {
+        font-size: 14px;
+    }
+    th, td {
+        padding: 10px 8px;
+    }
+    .btn-action {
+        padding: 6px 12px;
+    }
+}
