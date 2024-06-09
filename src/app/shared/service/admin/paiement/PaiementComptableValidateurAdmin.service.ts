@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {BehaviorSubject, Observable} from 'rxjs';
-
+import {HttpClient, HttpErrorResponse} from '@angular/common/http';
+import { Observable, throwError } from 'rxjs';
+import { catchError } from 'rxjs/operators';
 import {environment} from 'src/environments/environment';
 
 import {PaiementComptableValidateurDto} from 'src/app/shared/model/paiement/PaiementComptableValidateur.model';
@@ -28,5 +28,28 @@ export class PaiementComptableValidateurAdminService extends AbstractService<Pai
 
     get API() {
         return environment.apiUrlUnivservice + 'admin/paiementComptableValidateur/';
+    }
+
+
+    payer(demandeCode: string, comptableValidateurCin: string): Observable<string> {
+        const url = `${this.API}demande/${demandeCode}/cin/${comptableValidateurCin}`;
+        return this.http.post<string>(url, {}).pipe(
+            catchError(this.handleError)
+        );
+    }
+    private handleError(error: HttpErrorResponse): Observable<never> {
+        let errorMessage = 'error inconnue!';
+        if (error.error instanceof ErrorEvent) {
+
+            errorMessage = `Error: ${error.error.message}`;
+        } else {
+
+            if (error.error && error.error.message) {
+                errorMessage = `Message: ${error.error.message}`;
+            } else {
+                errorMessage = `Error Code: ${error.status}\nMessage: ${error.message}`;
+            }
+        }
+        return throwError(errorMessage);
     }
 }

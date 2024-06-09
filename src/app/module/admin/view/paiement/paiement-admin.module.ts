@@ -48,6 +48,7 @@ import { SplitButtonModule } from 'primeng/splitbutton';
 import { MessageModule } from 'primeng/message';
 import {MessagesModule} from 'primeng/messages';
 import {PaginatorModule} from 'primeng/paginator';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 
 
@@ -102,6 +103,8 @@ import {PaginatorModule} from 'primeng/paginator';
     FileUploadModule,
     FullCalendarModule,
     CardModule,
+      MatSnackBarModule,
+
 
   ],
   exports: [

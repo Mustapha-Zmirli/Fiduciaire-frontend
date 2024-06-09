@@ -1,30 +1,29 @@
 <div class="container-fluid">
-<table class="table table-striped">
-    <thead>
-    <tr>
-        <th>Societe</th>
-        <th>libelle</th>
-        <th>etat demande</th>
-        <th>Comptable traitant</th>
-        <th>Comptable validateur</th>
-        <th >Action</th>
-    </tr>
-    </thead>
-    <tbody>
-
-    <tr *ngFor="let d of demandes ;indes as i">
-        <td >{{d.societe.ice}}</td>
-        <td >{{d.libelle}}</td>
-        <td >{{d.etatDemande.libelle}}</td>
-        <td >{{d.comptableTraitant.cin}}</td>
-        <td >{{d.comptableValidateur.cin}}</td>
-        <td>
-            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
-                <button class="btn btn-primary" type="submit" id="valide" >Payer</button>
-
-            </div>
-        </td>
-    </tr>
-    </tbody>
-</table>
+    <table class="table table-striped table-hover">
+        <thead class="thead-dark">
+        <tr>
+            <th>Societe</th>
+            <th>Libelle</th>
+            <th>Etat Demande</th>
+            <th>Comptable Traitant</th>
+            <th>Comptable Validateur</th>
+            <th>Action</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let d of demandes; index as i">
+            <td>{{d.societe.rc}}</td>
+            <td>{{d.libelle}}</td>
+            <td>{{d.etatDemande.libelle}}</td>
+            <td>{{d.comptableTraitant.cin}}</td>
+            <td>{{d.comptableValidateur.cin}}</td>
+            <td>
+                <div class="btn-group" role="group" aria-label="Actions">
+                    <button class="btn btn-primary btn-action" (click)="payer(d)">Payer Traitement</button>
+                    <button class="btn btn-success btn-action" (click)="payerValidateur(d)">Payer Validation</button>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
