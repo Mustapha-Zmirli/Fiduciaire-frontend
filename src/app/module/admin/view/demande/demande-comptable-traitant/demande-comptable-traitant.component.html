@@ -62,6 +62,34 @@
                 </tr>
                 </tbody>
             </table>
+
+
+            <br>
+            <br>
+            <br>
+            <h2>Demandes Refusées :</h2>
+            <table class="table tableDemande table-hover mt-3">
+                <thead>
+                <tr>
+                    <th>code</th>
+                    <th>Libelle</th>
+                    <th>Etat Demande</th>
+                    <th>Societe</th>
+                    <th>Comptable Traitant</th>
+                    <th>Comptable Validateur</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let demande of demandesRefuser">
+                    <td>{{ demande.code }}</td>
+                    <td>{{ demande.libelle }}</td>
+                    <td>{{ demande.etatDemande ? demande.etatDemande.libelle : '' }}</td>
+                    <td>{{ demande.societe ? demande.societe.ice : '' }}</td>
+                    <td>{{ demande.comptableTraitant ? demande.comptableTraitant.nom : '' }}</td>
+                    <td>{{ demande.comptableValidateur ? demande.comptableValidateur.nom : '' }}</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>

@@ -14,8 +14,8 @@ import {ComptableAdminService} from "../../../../../shared/service/admin/commun/
   styleUrls: ['./demande-comptable-traitant.component.scss'],
 })
 export class DemandeComptableTraitantComponent implements OnInit{
-    //demandes: DemandeDto[]=[];
-    demandesAssociees: DemandeDto[] = [];//hada li5so yt afficha
+
+    demandesAssociees: DemandeDto[] = [];
     comptableTraitant: ComptableDto = new ComptableDto();
     demandesAcceptees: DemandeDto[]=[];
     demandesValidateur: DemandeDto[]=[];
@@ -55,7 +55,6 @@ export class DemandeComptableTraitantComponent implements OnInit{
                 console.log("La demande n'a pas refusée.");
             }
         });
-
     }
 
    /* getDemandesAssociees() {
